@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
+.container{
+    background-color:blue;
+}
+
+#book-list{
+    background-color: pink;
+    display:flex;
+    flex-direction: column;
+}
+
+
+.book-combined{
+display:flex;
+justify-content: center;
+align-items: center;
+background-color:white;
+}
+
+.titles{
+    padding-right:30px;
+}
+
+.header{
+    display:flex;
+    justify-content: center;
+}
