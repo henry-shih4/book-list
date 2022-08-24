@@ -3,30 +3,54 @@
     padding:0;
     margin:0;
 }
-
-.container{
-    background-color:blue;
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
-#book-list{
-    background-color: pink;
-    display:flex;
-    flex-direction: column;
-}
-
-
-.book-combined{
+#form{
 display:flex;
+width:100%;
 justify-content: center;
 align-items: center;
-background-color:white;
+margin-bottom:1em;
 }
 
-.titles{
-    padding-right:30px;
+#form label, #form input{
+    margin-right:10px;
 }
 
-.header{
+button{
+    margin-left:10px;
+}
+
+#container{
     display:flex;
+    height: 100vh;
+    flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+}
+
+
+#book-list{
+    display:flex;
+    flex-direction: column;
+    width:100%;
     justify-content: center;
+    align-items: center;
+}
+
+.book-combined{
+    display:flex;
+    min-width:50%;
+    background-color:peachpuff;
+    justify-content: space-around;
+        align-items: center;
+        padding:1em;
+        border:none;
+        border-radius:20px;
+}
+
+.books{
+    margin-right:1em;
 }

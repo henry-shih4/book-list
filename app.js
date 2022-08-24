@@ -24,16 +24,15 @@ function displayResults(data) {
   bookList = document.getElementById("book-list");
   bookList.innerText = "";
 
-  let header = document.createElement("h2");
-  let header2 = document.createElement("h3");
+  let headerCategory = document.createElement("h2");
+  let headerDate = document.createElement("h3");
 
-  header.textContent = `Top ${books.length} Books in ${data.results.display_name}`;
-  header.className = "header";
+  headerCategory.textContent = `Top ${books.length} Books in ${data.results.display_name}`;
+  headerCategory.className = "header category";
 
-  header2.textContent = `Best Seller Date: ${data.results.bestsellers_date}`;
-  header2.className = "header";
-
-  bookList.append(header, header2);
+  headerDate.textContent = `Best Seller Date: ${data.results.bestsellers_date}`;
+  headerDate.className = "header best-seller-date";
+  bookList.append(headerCategory, headerDate);
 
   let divTitles = document.createElement("div");
   divTitles.className = "books titles";
@@ -58,7 +57,7 @@ function displayResults(data) {
     paraTitle.textContent = `${i + 1}. ${titleCase}`;
 
     let paraAuthor = document.createElement("p");
-    paraAuthor.textContent = `${bookAuthor}`;
+    paraAuthor.textContent = `${i + 1}. ${bookAuthor}`;
 
     divTitles.append(paraTitle);
     divAuthors.append(paraAuthor);
