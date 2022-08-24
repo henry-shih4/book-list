@@ -9,21 +9,31 @@ body{
 
 #form{
 display:flex;
-width:100%;
 justify-content: center;
 align-items: center;
-margin-bottom:1em;
+padding:1em;
+background-color: aliceblue;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+width:70%;
+min-width: 400px;
 }
 
 #form label, #form input{
     margin-right:10px;
 }
 
+#date, #category{
+    min-width:100px;
+}
 button{
     margin-left:10px;
 }
 
 #container{
+    background-image: url('images/bookshelf.jpg');
+    background-size: cover;
+    opacity:0.8;
     display:flex;
     height: 100vh;
     flex-direction: column;
@@ -35,15 +45,19 @@ button{
 #book-list{
     display:flex;
     flex-direction: column;
-    width:100%;
     justify-content: center;
     align-items: center;
+    width:70%;
+    background-color: aliceblue;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-bottom:1em;
+    min-width:400px;
 }
 
 .book-combined{
     display:flex;
-    min-width:50%;
-    background-color:peachpuff;
+    background-color:aliceblue;
     justify-content: space-around;
         align-items: center;
         padding:1em;
@@ -51,6 +65,49 @@ button{
         border-radius:20px;
 }
 
+.header{
+    background-color: aliceblue;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+
 .books{
     margin-right:1em;
+}
+
+
+p{
+    padding:4px;
+}
+
+footer{
+    width:100%;
+    display:flex;
+    background-color: aliceblue;
+    font-size:12px;
+    justify-content: space-between;
+    align-items: center;
+    position:absolute;
+    bottom:0;
+    border-radius: 4px;
+}
+
+
+
+@media (max-width: 700px){
+    p{
+        font-size:12px;
+    }
+    h3{
+        font-size:18px;
+    }
+           h2 {
+               font-size: 22px;
+           }
+           #form{
+            display:flex;
+           }
+   
 }
