@@ -15,7 +15,7 @@ function fetchResults(e) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => displayResults(data))
-    .catch((error) => console.log("error fetching data"));
+    .catch((error) => errorMessage());
 }
 
 function displayResults(data) {
@@ -33,6 +33,15 @@ function displayResults(data) {
   headerDate.textContent = `Best Seller Date: ${data.results.bestsellers_date}`;
   headerDate.className = "header best-seller-date";
   bookList.append(headerCategory, headerDate);
+
+  let titleAuthorHeader = document.createElement("div");
+  let titleHeader = document.createElement("div");
+  let authorHeader = document.createElement("div");
+  titleHeader.textContent = "Book Title";
+  authorHeader.textContent = "Author Name";
+  titleAuthorHeader.append(titleHeader, authorHeader);
+  titleAuthorHeader.className = "title-author-header";
+  bookList.append(titleAuthorHeader);
 
   let divTitles = document.createElement("div");
   divTitles.className = "books titles";
@@ -64,4 +73,9 @@ function displayResults(data) {
     divCombined.append(divTitles, divAuthors);
     bookList.append(divCombined);
   }
+}
+
+function errorMessage() {
+  bookList = document.getElementById("book-list");
+  bookList.innerText = "No results found.";
 }
