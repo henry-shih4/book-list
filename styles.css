@@ -18,6 +18,14 @@ body{
     text-align: center;
     border-radius:12px;
     margin-bottom:20px;
+    padding:18px;
+}
+
+#info{
+    display:none;
+    font-size:12px;
+    color:black;
+    background-color:white;
 }
 
 #logo span{
@@ -47,9 +55,9 @@ h2{
 
 #date, #category{
     min-width:100px;
-}
-button{
-    margin-left:10px;
+    border:none;
+    border-radius:4px;
+    height:24px;
 }
 
 #container{
@@ -127,6 +135,12 @@ button{
     background-color:lightskyblue;
     color:white;
     width:80px;
+}
+
+button:hover {
+    color:lightskyblue;
+    background-color: white;
+    transition:0.4s;
 }
 
 footer{

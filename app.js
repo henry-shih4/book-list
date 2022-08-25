@@ -23,7 +23,8 @@ function displayResults(data) {
   let books = data.results.books;
   bookList = document.getElementById("book-list");
   bookList.innerText = "";
-
+  // document.getElementById("date").value = "";
+  // document.getElementById("category").value = "Categories";
   let headerCategory = document.createElement("h2");
   let headerDate = document.createElement("h3");
 
